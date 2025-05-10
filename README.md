@@ -77,3 +77,15 @@ LOG_WEBHOOK_URL=https://discord.com/api/webhooks/your_webhook_here
 [2025-05-09T22:39:11Z] Success > sgrab done, got 'Emilia (Re:Zero)', purr~
 [2025-05-09T22:39:14Z] Info > Next drop in 7 mins and 50 secs, next grab in 3 mins and 50 secs (meow)
 ```
+
+---
+
+## Stuff to add:
+- Automatic bumping
+- Multi-account support
+- Best card picker
+  Instead of picking a random card it will pick the best one.
+- Favourite & Wishlisted cards
+  If a wishlisted card comes up itl prioritize picking that card instead of the best one. 
+- Automatic card burning
+  If a card meets a specific requirement itl automatically burn the card. 
