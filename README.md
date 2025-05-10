@@ -83,9 +83,12 @@ LOG_WEBHOOK_URL=https://discord.com/api/webhooks/your_webhook_here
 ## Stuff to add:
 - Automatic bumping
 - Multi-account support
-- Best card picker
-  Instead of picking a random card it will pick the best one.
-- Favourite & Wishlisted cards
-  If a wishlisted card comes up itl prioritize picking that card instead of the best one. 
-- Automatic card burning
+- Best card picker:
+
+Instead of picking a random card it will pick the best one.
+- Favourite & Wishlisted cards:
+
+If a wishlisted card comes up itl prioritize picking that card instead of the best one. 
+- Automatic card burning:
+
   If a card meets a specific requirement itl automatically burn the card. 
