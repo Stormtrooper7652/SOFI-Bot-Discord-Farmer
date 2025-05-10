@@ -162,7 +162,7 @@ def farm_loop():
         until_grab = max(GRAB_COOLDOWN - (now2 - last_grab), timedelta())
         human_drop = format_timedelta(until_drop)
         human_grab = format_timedelta(until_grab)
-        log(f"Next drop {human_drop}, next grab {human_grab}", "Info")
+        # log(f"Next drop {human_drop}, next grab {human_grab}", "Info")
         time.sleep(5)
 
 if __name__ == "__main__":
