@@ -61,8 +61,6 @@ def run_task():
 
 if __name__ == "__main__":
     webhook_log("Initializing thread", "Info")
-    # not running as daemon while testing
-    # t1 = threading.Thread(target=run_task, daemon=True)
-    # t1.start()
-    # t1.join()
-    run_task()
+    t1 = threading.Thread(target=run_task, daemon=True)
+    t1.start()
+    t1.join()
