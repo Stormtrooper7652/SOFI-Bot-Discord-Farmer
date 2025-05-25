@@ -8,7 +8,7 @@ SOFI_CHANNEL = os.getenv("SOFI_CHANNEL_ID")				# Channel ID for Sofi commands
 SOFI_BOT_ID = os.getenv("SOFI_BOT_ID")					# Numeric ID of the Sofi bot
 SOFI_GUILD_ID = os.getenv("SOFI_GUILD_ID")				# Your server/guild ID
 LOG_WEBHOOK_URL = os.getenv("LOG_WEBHOOK_URL")			# Webhook URL for logging
-COMBINE_WEBHOOK_LOGS = True							# Weather to combine multiple logs into one request
+COMBINE_WEBHOOK_LOGS = True								# Weather to combine multiple logs into one request
 
 if not all([DC_MAIN_TOKEN, DC_SECONDARY_TOKEN, SOFI_CHANNEL, SOFI_BOT_ID, SOFI_GUILD_ID, LOG_WEBHOOK_URL]):
 	raise ValueError("Missing constant in .env")
