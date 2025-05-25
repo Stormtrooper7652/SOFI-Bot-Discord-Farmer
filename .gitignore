@@ -1,4 +1,5 @@
 test/
+.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -79,7 +80,6 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-.env
 
 # IPython
 profile_default/
