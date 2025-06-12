@@ -17,22 +17,23 @@ def post_message(message: str, token: str = DC_MAIN_TOKEN):
     resp = tls_session.post(url, json={"content": message}, headers=header)
     return resp.status_code
 
-def fetch_latest_drop(strict: bool = False):
+def fetch_latest_drop(strict: bool = True):
     try:
-        messages = requests.get(f"https://discord.com/api/v9/channels/{SOFI_CHANNEL}/messages?limit=5", headers=HEADERS).json()
+        messages = requests.get(f"https://discord.com/api/v9/channels/{SOFI_CHANNEL}/messages?limit=3", headers=HEADERS).json()
         for msg in messages:
             if msg.get("author", {}).get("id") == SOFI_BOT_ID and msg.get("components"):
                 if not strict: 
-                    return msg
-                timesent = msg.get("timestamp")
-                timestamp = datetime.fromisoformat(timesent)
-                now = datetime.now(timezone.utc)
-                delta = now - timestamp
-                if delta.seconds < 30: 
-                    return msg
+                    return msg, None
+                
+                content = msg.get("content")
+                if "Your **Drop** will be ready in" in content:
+                    return None, "Delay"
+                
+                if "is **dropping** cards" in content: 
+                    return msg, None
     except Exception as e:
         webhook_log(f"Error fetching drop: {e}", "Error")
-    return None
+    return None, None
 
 def grab_card(drop_msg: dict, index: int | None = None, token: str = DC_MAIN_TOKEN):
     header = HEADERS

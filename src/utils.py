@@ -11,10 +11,10 @@ ordermap = {
 }
 
 log_color_map = {
-    "Info": Style.BRIGHT,
-    "Warning": Fore.YELLOW,
-    "Error": Fore.BLACK + Back.RED,
-    "Success": Fore.GREEN
+    "Info": "",
+    "Warning": Style.BRIGHT + Fore.YELLOW,
+    "Error": Style.BRIGHT + Fore.WHITE + Back.RED,
+    "Success": Style.BRIGHT + Fore.GREEN
 }
 
 message_stack_type = "Info"
